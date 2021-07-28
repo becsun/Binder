@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px grey;
+}
+
+.header__logo {
+    height: 60px;
+    object-fit: contain;
+}
