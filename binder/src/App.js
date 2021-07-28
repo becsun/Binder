@@ -1,13 +1,24 @@
 import React from 'react';
 import Header from './Header';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import BunnyCards from './BunnyCards';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      
-        <h1>Bunny Tinder 🐰🐰</h1>
-        <Header />
+      <Header />
+      <Router>
+        <Switch>
+          <Route path="/chat">
+            <h1>chat page</h1>
+          </Route>
+          <Route path="/">
+            <BunnyCards />
+          </Route>
+          
+        </Switch>
+      </Router>
       
     </div>
   );
