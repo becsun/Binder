@@ -10,13 +10,19 @@ const BunnyCards=() =>{
     const [bunny, setBunny] = useState([]);
     //const people = [];
 
-
+// where the code runs, only once and never again
     useEffect(() => {
-        // where the code runs, only once and never again
-        database.collection('bunnies').onSnapshot(snapshot =>{
+        const unsubcribe = database
+        .collection("bunnies")
+        .onSnapshot((snapshot) =>
             setBunny(snapshot.docs.map(doc => doc.data()))
-        })
-    }, [bunny]); 
+        );
+        
+        //return is a clean up function
+    return () => {
+        unsubcribe();
+    };
+    }, []); 
 
     return(
             <div className="bunnyCard__container">
