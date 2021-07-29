@@ -1,25 +1,22 @@
-import React, {useState} from 'react'
-import TinderCard from 'react-tinder-card'
-import './BunnyCards.css' 
+import React, {useState, useEffect} from 'react';
+import TinderCard from 'react-tinder-card';
+import database from './firebase';
+import './BunnyCards.css';
 
 
 
 const BunnyCards=() =>{
 
-    const [bunny, setBunny] = useState([
-        {
-            name: 'thumper',
-            url: 'https://res.cloudinary.com/do68wjft3/image/upload/v1610400315/4B86CE54-AC68-4CFE-B446-C13927F2BB27_1_201_a_kuqymi.jpg'
-        },
-        {
-            name: 'spotty',
-            url: 'https://pbs.twimg.com/profile_images/447374371917922304/P4BzupWu.jpeg'
-        }
-    ]);
+    const [bunny, setBunny] = useState([]);
     //const people = [];
 
 
-
+    useEffect(() => {
+        // where the code runs, only once and never again
+        database.collection('bunnies').onSnapshot(snapshot =>{
+            setBunny(snapshot.docs.map(doc => doc.data()))
+        })
+    }, [bunny]); 
 
     return(
             <div className="bunnyCard__container">
