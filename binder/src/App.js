@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './Header';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import BunnyCards from './BunnyCards';
+import SwipeButtons
+ from './SwipeButtons';
 import './App.css';
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
           </Route>
           <Route path="/">
             <BunnyCards />
+            <SwipeButtons />
           </Route>
         </Switch>
       </Router>
