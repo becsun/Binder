@@ -39,7 +39,7 @@ const BunnyCards=() =>{
                     
                     <h3>{bunny.name}</h3>
                     </div> 
-                /</TinderCard>
+                </TinderCard>
             ))}
         </div>
         
