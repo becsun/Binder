@@ -10,13 +10,9 @@ function App() {
       <Header />
       <Router>
         <Switch>
-          <Route path="/chat">
-            <h1>chat page</h1>
-          </Route>
           <Route path="/">
             <BunnyCards />
           </Route>
-          
         </Switch>
       </Router>
       

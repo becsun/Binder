@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import TinderCard from 'react-tinder-card'
+import './BunnyCards.css' 
 
 
 
@@ -8,7 +9,7 @@ const BunnyCards=() =>{
     const [bunny, setBunny] = useState([
         {
             name: 'thumper',
-            url: 'https://media.newyorker.com/photos/59096937019dfc3494ea1169/master/pass/Frazier-Bunny-Rabbits.jpg'
+            url: 'https://res.cloudinary.com/do68wjft3/image/upload/v1610400315/4B86CE54-AC68-4CFE-B446-C13927F2BB27_1_201_a_kuqymi.jpg'
         },
         {
             name: 'spotty',
@@ -21,8 +22,7 @@ const BunnyCards=() =>{
 
 
     return(
-        <div>
-            <hi>Hi</hi>
+            <div className="bunnyCard__container">
             {bunny.map((bunny) => (
                 <TinderCard
                     className="swipe"
@@ -33,7 +33,8 @@ const BunnyCards=() =>{
                         style={{ backgroundImage: `url(${bunny.url})` }} 
                         className="card"
                     >
-                        <h3>{performance.name}</h3>
+                    
+                    <h3>{bunny.name}</h3>
                     </div> 
                 /</TinderCard>
             ))}
