@@ -8,7 +8,7 @@ import './BunnyCards.css';
 const BunnyCards=() =>{
 
     const [bunny, setBunny] = useState([]);
-    //const people = [];
+    //const bunny = [];
 
 // where the code runs, only once and never again
     useEffect(() => {

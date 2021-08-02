@@ -1,0 +1,28 @@
+{
+  "name": "binder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "seed": "node db/seeds.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/becsun/Binder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/becsun/Binder/issues"
+  },
+  "homepage": "https://github.com/becsun/Binder#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.0.1",
+    "mongoose": "^5.13.5",
+    "nodemon": "^2.0.12"
+  }
+}

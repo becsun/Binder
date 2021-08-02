@@ -3,8 +3,8 @@ import Header from './Header';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import BunnyCards from './BunnyCards';
 import Chats from './Chats';
-import SwipeButtons
- from './SwipeButtons';
+import SwipeButtons from './SwipeButtons';
+import ChatScreen from './ChatScreen';
 import './App.css';
 
 function App() {
@@ -12,10 +12,14 @@ function App() {
     <div className="App">
       <Router>
       <Switch>
-        <Route path="/chat">
+        <Route path="/chat/:bunnies">
+          <Header backButton="/chat"/>
+          <ChatScreen />
+          <Chats />
+          </Route>
+          <Route path="/chat">
           <Header backButton="/"/>
           <Chats />
-            <h1>chat page</h1>
           </Route>
           <Route path="/">
             <Header />
