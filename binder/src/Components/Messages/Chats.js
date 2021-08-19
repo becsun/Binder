@@ -1,6 +1,6 @@
 import React from 'react';
-import Chat from "./Chat";
-import './Chats.css'
+import Chat from "./Components/Messages/Chat";
+// import './Chats.css'
 
 
 const Chats = () => {

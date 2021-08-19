@@ -1,6 +1,6 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
-import "./Chat.css"
+import "/Users/becsun/projectsFolder/binder-project/Binder/binder/src/Chat.css"
 
 function Chat({name, message, profilePic, timestamp}){
     return (
